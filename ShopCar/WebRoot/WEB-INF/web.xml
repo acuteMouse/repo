@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowAllBooks</servlet-name>
+    <servlet-class>com.controller.ShowAllBooks</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BuyBookServlet</servlet-name>
+    <servlet-class>com.controller.BuyBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowShopCarServlet</servlet-name>
+    <servlet-class>com.controller.ShowShopCarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangeNumberServlet</servlet-name>
+    <servlet-class>com.controller.ChangeNumberServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteShopCarItem</servlet-name>
+    <servlet-class>com.controller.DeleteShopCarItem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteAllServlet</servlet-name>
+    <servlet-class>com.controller.DeleteAllServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ShowAllBooks</servlet-name>
+    <url-pattern>/servlet/ShowAllBooks</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyBookServlet</servlet-name>
+    <url-pattern>/servlet/BuyBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowShopCarServlet</servlet-name>
+    <url-pattern>/servlet/ShowShopCarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeNumberServlet</servlet-name>
+    <url-pattern>/servlet/ChangeNumberServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShopCarItem</servlet-name>
+    <url-pattern>/servlet/DeleteShopCarItem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAllServlet</servlet-name>
+    <url-pattern>/servlet/DeleteAllServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <!-- 名称前面不要加/ -->
+    <welcome-file>servlet/ShowAllBooks</welcome-file>
+  </welcome-file-list>
+</web-app>

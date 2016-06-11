@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="D:/BaiduYunDownload/[www.java1234.com]一头扎进MyBatis3视频教程/[www.java1234.com]《一头扎进MyBatis3》第一讲源码及文档/资料/mysql-connector-java-3.1.12-bin.jar"/>
+	<classpathentry kind="lib" path="D:/BaiduYunDownload/[www.java1234.com]一头扎进MyBatis3视频教程/[www.java1234.com]《一头扎进MyBatis3》第一讲源码及文档/资料/mybatis-3.2.8/mybatis-3.2.8/mybatis-3.2.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

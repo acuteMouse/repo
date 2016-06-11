@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<package name="user" extends="json-default">
+		<!-- 登陆Action -->
+		<action name="loginAction" class="com.jhsy.action.AdminAction"
+			method="login">
+			<result name="success">/jsp/superAdminSee.jsp</result>
+			<result name="fail">/jsp/login.jsp</result>
+
+		</action>
+		<!-- 新增管理员 -->
+		<action name="saveAdminAction" class="com.jhsy.action.AdminAction"
+			method="saveAdmin">
+			<result name="success">/jsp/ShowAdmin.jsp</result>
+		</action>
+		<!-- 查询所有管理员 -->
+		<action name="selectAdminsAction" class="com.jhsy.action.AdminAction"
+			method="selectAdmins">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 更新管理员信息 -->
+		<action name="updateAdminAction" class="com.jhsy.action.AdminAction"
+			method="updateAdmin">
+			<result name="success" type="redirectAction">selectAdminsAction</result>
+		</action>
+		<!-- 删除管理员 -->
+		<action name="deleteAdminAction" class="com.jhsy.action.AdminAction"
+			method="deleteAdmin">
+			<result name="success" type="redirectAction">selectAdminsAction</result>
+		</action>
+		<!--  查询员工-->
+		<action name="selectStaff" class="com.jhsy.action.StaffAction"
+			method="selectStaffs">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 新增员工 -->
+		<action name="saveStaff" class="com.jhsy.action.StaffAction"
+			method="addStaff">
+			<result name="success">/jsp/showStaff.jsp</result>
+		</action>
+		<!-- 删除员工 -->
+		<action name="deleteStaff" class="com.jhsy.action.StaffAction"
+			method="deleteStaff">
+			<result name="success">/jsp/showStaff.jsp</result>
+		</action>
+		<!--修改员工信息 -->
+		<action name="updateStaff" class="com.jhsy.action.StaffAction"
+			method="updateStaff">
+			<result name="success" type="redirectAction">selectStaff</result>
+		</action>
+		<!-- 查询仓库中现在的产品数量等信息 -->
+		<action name="selectProduct" class="com.jhsy.action.ProductAction"
+			method="selectProduct">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 更改产品的描述信息 -->
+		<action name="updateProduct" class="com.jhsy.action.ProductAction"
+			method="updateProduct">
+			<result name="success" type="redirectAction">selectProduct</result>
+		</action>
+		<action name="addProductIn" class="com.jhsy.action.BuyProductAction"
+			method="buy">
+		</action>
+		<!--  查询新闻-->
+		<action name="selectNews" class="com.jhsy.action.NewsAction"
+			method="selectNews">
+			<result name="success">/index.jsp</result>
+		</action>
+		<!-- ajax查询新闻 -->
+		<action name="ajaxSelectNews" class="com.jhsy.action.NewsAction"
+			method="ajaxSelectNews">
+			<result name="success">/news.jsp</result>
+		</action>
+		<action name="selectNewsByTitle" class="com.jhsy.action.NewsAction" method="selectNewsByTitle">
+			<result name="success">/newsInfo.jsp</result>
+		</action>
+	</package>
+</struts>
+	

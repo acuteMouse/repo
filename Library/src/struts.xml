@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" extends="json-default">
+		<!-- 管理员登陆验证
+		<action name="login" class="com.library.action.AdminAction"
+			method="login">
+			<result name="success">/pages/main.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		 -->
+		<!-- 查询所有图书信息 -->
+		<action name="findAllBook" class="com.library.action.BookAction"
+			method="findAllBook">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 删除一本书 -->
+		<action name="deleteBook" class="com.library.action.BookAction"
+			method="deleteBook">
+			<result type="redirect">findAllBook</result>
+		</action>
+		<!-- 添加图书 -->
+		<action name="addBook" class="com.library.action.BookAction"
+			method="addBook">
+			<result type="redirect">findAllBook</result>
+		</action>
+		<!-- 更新图书信息 -->
+		<action name="updateBook" class="com.library.action.BookAction"
+			method="updateBook">
+			<result type="redirect">findAllBook</result>
+		</action>
+		<!-- 查找所有用户 -->
+		<action name="findAllUser" class="com.library.action.UserAction"
+			method="findAllUser">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 添加用户 -->
+		<action name="addUser" class="com.library.action.UserAction"
+			method="addUser">
+			<result type="redirect">findAllUser</result>
+		</action>
+		<!-- 更新用户信息 -->
+		<action name="updateUser" class="com.library.action.UserAction"
+			method="updateUser">
+			<result type="redirect">findAllUser</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="deleteUser" class="com.library.action.UserAction"
+			method="deleteUser">
+			<result type="redirect">findAllUser</result>
+		</action>
+		<!-- 查找所有借阅记录 -->
+		<action name="findAll" class="com.library.action.BorrowAction"
+			method="findAll">
+			<result type="json">
+				<param name="root">responseJson</param>
+			</result>
+		</action>
+		<!-- 借书action -->
+		<action name="addBorrow"  class="com.library.action.BorrowAction" method="addBorrow">
+		<result type="redirect">findAll</result>
+		</action>
+	</package>
+
+</struts>
+	
